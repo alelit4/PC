@@ -1,0 +1,310 @@
+Respuestas Práctica 1
+
+17. ¿Cuál es la diferencia entre compilación e interpretación?
+
+ Un intérprete lee cada línea del programa fuente y la ejecuta inmediatamente, mientras que un compilador convierte todas estas líneas de codigo fuente en lenguaje máquina y las almacena en un programa objeto. Este programa objeto es el que va a ser ejecutado posteriormente.  
+
+
+18. ¿Qué permisos tiene el fichero helloWorld.sh? ¿Se puede ejecutar directamente? (./helloWorld.sh)
+
+Este fichero tiene permisos de lectura, escritura y ejecución para el dueño y de escritura para los miembros del grupo y del resto de los usuarios.
+
+Si se puede ejecutar directamente, ya que está escrito en un lenguaje interpretado(shell).
+
+19. ¿Qué permisos tiene el fichero helloWorld.py? ¿Se puede ejecutar directamente? (./helloWorld.py)
+
+Tiene los mismos permisos que el fichero anterior de lectura, escritura y ejecución para el dueño y de escritura para los miembros del grupo y del resto de los usuarios.
+
+Y de la misma forma se puede ejecutar directamente, ya que está escrito en un lenguaje interpretado(Python).
+
+20. ¿Cuál es la principal diferencia entre el contenido del fichero helloWorld.sh y helloWorld.py?
+
+La principal diferencia es que están escritos en lenguajes diferentes uno en Python y otro en shell directamente. 
+
+
+21. ¿En qué directorio está instalado el intérprete de Python? (which python)
+
+Está instalado en 
+	/usr/bin/python
+
+26. ¿Qué sucede cuando se usa el operador de división entera (//) con números reales? Por ejemplo:
+( 1.0 // 3.0 )
+
+Nos devuelve un número real 0.0
+
+27. ¿Qué hace el operador **? Por ejemplo: ( 2 ** 3 )
+
+Calcula potencias. En este caso tendríamos 2 elevado a 3. 
+
+28. ¿Qué hace el operador %? Por ejemplo: ( 12 % 10 )
+Este operador calcula el resto de una división.
+
+29. ¿Qué hacen los operadores +=, -=, *=, /=, **=, //=?
+
+a += b <=> a = a + b --> Realiza la suma de un elemento con otro y almacena el resultado en uno de ellos.
+
+a -= b <=> a = a - b --> Realiza la resta de un elemento con otro y almacena el resultado en uno de ellos.
+
+a *= b <=> a = a * b --> Realiza la multiplicación de un elemento con otro y almacena el resultado en uno de ellos.
+
+a /= b <=> a = a / b --> Realiza la división a de un elemento con otro y almacena el resultado en uno de ellos.
+
+a **= b <=> a = a ** b --> Calcula la potencia de un elemento con otro y almacena el resultado en uno de ellos.
+
+a //= b <=> a = a // b --> Calcula el cociente de un elemento con otro y almacena el resultado en uno de ellos.
+
+30. Evaluar las siguientes expresiones:
+>> 2 + 3 < 2 * 3 or 6 < 10
+True
+>>> (2+3 < 2) * (3 or 6 < 10)
+0
+>>> a = 2 < 4
+>>> a
+True
+>>> b = 2 >= 4
+>>> b
+False
+>>> a * b
+0
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+
+31. En Python hay números enteros y números reales. Los números enteros pertenecen a la clase denominada int, los números reales pertenecen a otra clase llamada float. True y False pertenecen a la clase bool. Para determinar la clase de un número o variable se usa la función type(). Comprobar su comportamiento con los siguientes ejercicios:
+
+>>> type(10)
+<type 'int'>
+>>> type(10.0)
+<type 'float'>
+>>> type(False)
+<type 'bool'>
+>>> type(True)
+<type 'bool'>
+>>> type(10) is int
+True
+>>> type(10.0) is float
+True
+>>> type(10<20) is bool
+True
+>>> type(False) is bool
+True
+>>> type(False) is int
+False
+>>> type(10) == type(10.0)
+False
+>>> type(10+20) == type(10)
+True
+>>> type(10+20) == type(10<20)
+False
+
+32. Escriba varias cadenas (strings), asígnelas a variables y concaténalas entre sí. Por ejemplo:
+
+>>> estrofa = "El patio de mi casa ... "
+>>> estribillo = " dubidibu "
+>>> estribillo += "zombie "*4
+>>> cancion = estrofa + estribillo 
+>>> cancion
+'El patio de mi casa ...  dubidibu zombie zombie zombie zombie '
+
+33. Pruebe las siguientes expresiones de comparación entre cadenas:
+
+>>> a = 'PYTHON'
+>>> b = 'python'
+>>> a == b
+False
+>>> a != b
+True
+>>> a <= b
+True
+
+34. ¿Qué ocurre al concatenar objetos de tipo cadena con objetos numéricos? Por ejemplo:
+
+>>> 'PYTHON' + 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> 'PYTHON' + 3.1415
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'float' objects
+
+Nos da un error. 
+
+5. ¿Qué hace la función str()? Por ejemplo:
+>>> 'PYTHON' + str(3)
+'PYTHON3'
+>>> 'PYTHON' + str(3.1415)
+'PYTHON3.1415'
+
+36. ¿Qué resultado se obtiene al ejecutar las siguientes expresiones?
+
+>>> "3" + 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> int("3") + 3
+6
+>>> "3" + str(3)
+'33'
+
+
+37. Se puede acceder a cada una de las letras de una cadena de caracteres usando el operador de indexación []. ¿Qué resultados se obtienen al ejecutar lo siguiente?
+
+>>> 'PYTHON'[0]
+'P'
+>>> cantante[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cantante' is not defined
+
+
+38. El mismo operador se utiliza para acceder a segmentos de la cadena (substrings). El primer número indica el  índice de inicio y el segundo, separado por dos puntos, la longitud. ¿Qué resultados se obtienen al ejecutar?
+
+
+>>> 'PYTHON'[0:3]
+'PYT'
+>>> cantante[2:4]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cantante' is not defined
+
+
+39. ¿Qué ocurre cuando se utilizan índices negativos para acceder a los elementos de una cadena? Por ejemplo:
+( PYTHON[-1] )
+
+>>> 'PYTHON'[-1]
+'N'
+>>> 'PYTHON'[-6]
+'P'
+
+ Lo que ocurre es que nos da un índice invertido, es decir el número -1 va a ser el carácter más hacia la derecha y , en este caso concreto, el índice -6 nos va a devolver el carácter más hacia la izquierda.
+
+40. ¿Qué sucede cuando se omite parte del rango de una cadena? Por ejemplo, PYTHON[3:] o PYTHON[:3]
+
+>>> 'PYTHON'[3:]
+'HON'
+>>> 'PYTHON'[:3]
+'PYT'
+
+Lo que ocurre es que se asume que o se empieza desde el inicio [:3] o que se acaba hasta el final [3:]
+
+
+41. ¿Qué hace la función abs()? Por ejemplo:
+>>> abs(-3)
+3
+>>> abs(3)
+3
+
+Nos da el valor absoluto del número que le pasemos.
+
+
+42. ¿Qué hace la función float()? Por ejemplo:
+
+>>> float(3)
+3.0
+>>> float(3.2)
+3.2
+>>> float(3.2e10)
+32000000000.0
+>>> float(Un Texto)
+  File "<stdin>", line 1
+    float(Un Texto)
+                 ^
+SyntaxError: invalid syntax
+
+Esta función crea variables del tipo float. 
+
+
+43. ¿Qué hace la función int()? Por ejemplo:
+>>> int(2.1)
+2
+>>> int(-2.9)
+-2
+>>> int('2')
+2
+
+Esta función crea variables del tipo int.
+
+44. ¿Qué hace la función round()? Por ejemplo:
+>>> round(2.1)
+2.0
+>>> round(2.9)
+3.0
+>>> round(-2.9)
+-3.0
+>>> round(2)
+2.0
+
+Redondea el valor del número que le pasemos. 
+
+
+45. ¿Cuál es el resultado de evaluar las siguientes expresiones?
+
+>>> abs(-23) % int(7.3)
+2
+>>> abs(round(-34.2765,1))
+34.3
+>>> str(int(12.3)) + 0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> str(float(str(2) * 3 + .123)) + 321
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'float' objects
+>>> str(int(2.1) + float(3))
+'5.0'
+
+
+46. ¿Cuál es el resultado de ejecutar las siguientes sentencias?
+
+from math import sin
+sin(0)
+sin(1)
+cos(0)
+
+from math import cos
+cos(0)
+
+from math import *
+sin(2*pi)
+
+47. ¿Cuál es el resultado de evaluar las siguientes expresiones?
+
+from math import *
+int(exp(2 * log(3)))
+round(4*sin(3 * pi / 2))
+abs(log10(.01) * sqrt(25))
+round(3.21123 * log10(1000), 3)
+
+48. ¿Cuál es el resultado de ejecutar las siguientes sentencias?
+print "%d" %1
+print "%d %d" %(1, 2)
+print "%d%d" %(1, 2)
+print "%d, %d" %(1, 2)
+print 1, 2
+print "%d 2" %1
+
+49. Escriba un programa Python, en el entorno interactivo, que calcule el promedio de las calificaciones de tres asignaturas en tres acumuladores independientes y luego calcule el promedio general de todas.
+
+50. Situado en el directorio de la asignatura, es decir, en el directorio \PC comprima las actividades de la práctica (tar -zcvf prct01.tgz prct01/).
+
+51. Compruebe que se ha creado el fichero prct01.tgz correctamente en el directorio actual (tar -ztvf prct01.tgz *).
+
+52. Suba el fichero prct01.tgz a la tarea habilitada en el campus virtual.
+
+53. Cierre la sesión.
+
