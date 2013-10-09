@@ -1,4 +1,9 @@
+Programación Científica
+Alexandra Rivero García
 Respuestas Práctica 1
+
+Git Repository: https://github.com/alelit4/PC
+
 
 17. ¿Cuál es la diferencia entre compilación e interpretación?
 
@@ -271,34 +276,75 @@ TypeError: cannot concatenate 'str' and 'float' objects
 
 46. ¿Cuál es el resultado de ejecutar las siguientes sentencias?
 
-from math import sin
-sin(0)
-sin(1)
-cos(0)
+>>> from math import sin
+>>> sin(0)
+0.0
+>>> sin(1)
+0.8414709848078965
+>>> cos(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cos' is not defined
+>>> from math import cos
+>>> cos(0)
+1.0
+>>> from math import *
+>>> sin(2*pi)
+-2.4492935982947064e-16
 
-from math import cos
-cos(0)
-
-from math import *
-sin(2*pi)
 
 47. ¿Cuál es el resultado de evaluar las siguientes expresiones?
 
-from math import *
-int(exp(2 * log(3)))
-round(4*sin(3 * pi / 2))
-abs(log10(.01) * sqrt(25))
-round(3.21123 * log10(1000), 3)
+>>> from math import *
+>>> int(exp(2 * log(3)))
+9
+>>> round(4*sin(3 * pi / 2))
+-4.0
+>>> abs(log10(.01) * sqrt(25))
+10.0
+>>> round(3.21123 * log10(1000), 3)
+9.634
+
 
 48. ¿Cuál es el resultado de ejecutar las siguientes sentencias?
-print "%d" %1
-print "%d %d" %(1, 2)
-print "%d%d" %(1, 2)
-print "%d, %d" %(1, 2)
-print 1, 2
-print "%d 2" %1
+
+>>> print "%d" %1
+1
+>>> print "%d %d" %(1, 2)
+1 2
+>>> print "%d%d" %(1, 2)
+12
+>>> print "%d, %d" %(1, 2)
+1, 2
+>>> print 1, 2
+1 2
+>>> print "%d 2" %1
+1 2
+
 
 49. Escriba un programa Python, en el entorno interactivo, que calcule el promedio de las calificaciones de tres asignaturas en tres acumuladores independientes y luego calcule el promedio general de todas.
+
+>>> asignatura1 = 8.9 + 7.6 + 9.2 + 8.8
+>>> asignatura1
+34.5
+>>> asignatura1/=4
+>>> asignatura1
+8.625
+>>> asignatura2 = 7.9 + 6.4 + 8.2 + 9.8
+>>> asignatura2/=4
+>>> asignatura2
+8.075
+>>> asignatura3 = 9.1 + 6.6 + 10.0 + 8.0
+>>> asignatura3
+33.7
+>>> asignatura3/=4
+>>> asignatura3
+8.425
+>>> total = asignatura1 + asignatura2 + asignatura3
+>>> total/=3
+>>> total
+8.375
+
 
 50. Situado en el directorio de la asignatura, es decir, en el directorio \PC comprima las actividades de la práctica (tar -zcvf prct01.tgz prct01/).
 
