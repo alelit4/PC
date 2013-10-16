@@ -5,3 +5,278 @@ Respuestas Práctica 2
 Git Repository: https://github.com/alelit4/PC
 
 10. ¿Qué hace el siguiente programa? ¿Es correcto? ¿Qué está mal?
+	
+	Este programa no se puede ejecutar, ya que en la línea 6 o en el momento de definir la operación a * x + b = 0 hay dos errores. 
+
+	Por un lado la variable x no está definida o inicializada por lo que no podemos operar con ella. Por otro lado no se puede hacer una asignación de un valor(en este caso 0) a una serie de operaciones.
+
+
+11. ¿Qué hace el siguiente programa? ¿Es correcto? ¿Qué está mal?
+
+	En este programa, igual que en el anterior, encontramos un error, esta vez en la línea 3. El problema que tenemos es que estamos asignándole a x una operacion de dos variables que no hemos inicializado por lo que no puede operar con ellas. 
+
+12. ¿Qué hace el siguiente programa cuando el valor de la variable a es cero? Haga una propuesta para solucionar el error que se produce en tiempo de ejecución.
+
+	Lo que ocurre es que no podemos dividir un número por cero. Para solucionarlo podemos poner una sentencia para verificar que a sea diferente de 0.
+
+	De esta forma nos queda el programa de la forma:
+
+	a = 0.0
+	while a == 0.0:
+		a = float(raw_input('Valor de a: '))
+	b = float(raw_input('Valor de b: '))
+
+	#a * x + b = 0
+	x = -b/a
+
+	print 'Solucion: ', x
+
+	La solución la he añadido al propio fichero ecuacion1ergrado1.py
+
+13. ¿Qué error se produce en tiempo de compilación?. ¿Cómo se soluciona?
+
+	Por un lado tenemos un error que de tipo sintáctico, ya que en vez de hacer una comparación en la línea 8 estamos haciendo una asignación dentro de una sentencia if. Para solucionar esto simplemente añadimos un == al = de la sentencia.
+
+	Por otro lado tenemos algunas tildes en la línea 12 que dan error, ya que no pertenecen a la codificación ASCII que es la que tiene por defecto python. Para arreglar esto le ponemos de codificación UTF-8 añadiendo dos líneas al principio de nuestro programa, de tal forma, que después de estos arreglos nos queda lo siguiente: 
+
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+
+	#a * x + b = 0
+	a = float(raw_input('Valor de a: '))
+	b = float(raw_input('Valor de b: '))
+
+	if a != 0:
+	  x = -b/a
+	  print 'Solucion: ', x
+	if a == 0:
+  	print 'La ecuación no tiene solución.'
+
+  	La solución la he añadido al propio fichero ecuacion1ergrado2.py
+
+  	14. Modifique el programa que calcula la solución de una ecuación de primer grado para que contemple que cuando tanto el valor de a como el de b son cero, la ecuación tiene infinitas soluciones. 
+
+  	La solución la he añadido al propio fichero ecuacion1ergrado2_mod.py
+
+15. ¿Qué hace el siguiente programa?
+	
+	Primero nos pide tres valores por pantalla, los cuales los guarda como floats en las variables 'a', 'b' y 'c'.
+
+	Si el valor de 'a' es distinto de cero calculamos los valores de la ecuación de segundo grado o lo que es lo mismo x1 y x2, de tal forma:
+		x1 = (-b + Raíz(b^(2) - (4 x a x c)) / (2 x a)
+		x2 = (-b - Raíz(b^(2) - (4 x a x c)) / (2 x a)
+
+		y mostramos el valor calculado de x1 y x2 en float.
+
+	Si por el contrario el valor de 'a' es distinto de cero pasamos a evaluar el de 'b'. Si es distinto de cero calculamos 'x' de la forma:	'x = -c/b' y lo mostramos por la pantalla. 
+
+	Por otro lado si 'b' es cero pasamos a revisar el valor de 'c' y simplemente si es igual o no a cero nos muestra un aviso por pantalla u otro. 
+
+
+16. ¿Existe alguna diferencia entre el programa de la pregunta 15 y este cuando se ejecutan?
+
+	Aunque los bucles actúan de la misma forma que en el programa de la pregunta anterior a la hora de evaluar 'c' si este es igual a cero nos informa 'La ecuación no tiene solucion' y si no es cero nos muestra 'La ecuación tiene infinitas soluciones'. En el caso del ejercicio 15 nos muestra justo lo contrario si 'c' es cero nos dice que la ecuación tiene infinitas soluciones y si no, nos dice que no tiene solución.
+
+
+17. ¿Existe alguna diferencia entre el programa de la pregunta 15 y este cuando se ejecutan?
+
+	Aunque se comparen de forma diferente y la estructura de los bucles no sea la misma en este caso si que vamos a obtener los mismos resultados. 
+
+
+18. Modifique el programa de la pregunta 17 para utilizar la sentencia elif.
+
+  	La solución la he añadido al fichero ecuacion2dogrado3_mod.py
+
+19. ¿Qué ocurre cuando ejecuta el programa de la pregunta 17 con los siguientes valores a = 1, b = 1 y c = 1? Proponga una solución.
+
+Lo que ocurre es que no podemos hacer el cuadrado de un número negativo, para solucionarlo añado algunas comprobaciones. La solución se encuentra en el fichero ecuacion2dogrado3_mod2.py
+
+20. ¿Qué hace el siguiente programa?
+
+Lo que hace este programa es ejecutar un bucle while 10 veces en el que va acumulando el valor del índice i a una variable que se llama sumatorio. Todo esto es lo mismo que decir que al final tendremos:
+
+sumatorio = 0 + 2 = 2 
+sumatorio = 2 + 3 = 5
+sumatorio = 5 + 4 = 9
+sumatorio = 9 + 5 = 14
+... hasta obtener 
+sumatorio = 54 + 11 = 65 
+
+21. ¿Cuál es la diferencia entre este programa y el de la pregunta 20? ¿Producen ambos el mismo resultado? ¿Por qué?
+
+	La difenrencia está en que en este segundo programa dentro del bucle primero hacemos la suma del acumulador 'sumatorio' y luego incrementamos el índice, por lo que el resultado final es diferente. 
+
+	En este caso el comportamiento de 'sumatorio' es de la forma:
+
+
+sumatorio = 0 + 1 = 1 
+sumatorio = 1 + 2 = 3
+sumatorio = 3 + 3 = 6
+sumatorio = 6 + 4 = 10
+... hasta obtener 
+sumatorio = 45 + 10 = 55 
+
+22. ¿Qué hace el siguiente programa?
+
+	Después de añadirle ':' al finalizar el bucle podemos ver lo que hace el programa, que no es nada más y nada menos que calcular el valor del número que le pasemos elevado a 2, 3, 4 y 5. 
+
+23. ¿Qué muestran las siguientes sentencias? ¿Cuál es el tipo de datos de la variable a?
+
+>>> a = ['pan', 'huevos', 100, 1234]
+>>> a
+['pan', 'huevos', 100, 1234]
+>>> a[0]
+'pan'
+>>> a[3]
+1234
+>>> a[-2]
+100
+>>> a[1:-1]
+['huevos', 100]
+>>> a[:2] + ['carne', 2*2]
+['pan', 'huevos', 'carne', 4]
+>>> 3*a[:3] + ['Boo!']
+['pan', 'huevos', 100, 'pan', 'huevos', 100, 'pan', 'huevos', 100, 'Boo!']
+>>> a
+['pan', 'huevos', 100, 1234]
+>>> a[2] = a[2] + 23
+>>> a
+['pan', 'huevos', 123, 1234]
+>>> a[0:2] = [1, 12]
+>>> a
+[1, 12, 123, 1234]
+>>> len(a)
+4
+>>> q = [2, 3]
+>>> p = [1, q, 4]
+>>> len(p)
+3
+>>> p
+[1, [2, 3], 4]
+>>> p[1]
+[2, 3]
+>>> p[1][0]
+2
+>>> p[1].append('extra')
+>>> p
+[1, [2, 3, 'extra'], 4]
+>>> q
+[2, 3, 'extra']
+
+24. ¿Qué hacen las siguientes sentencias?
+
+>>> a = ['gato', 'ventana', 'defenestrado']
+>>> for x in a:
+...     print x, len(x)
+... 
+gato 4
+ventana 7
+defenestrado 12
+>>> for x in a[:]:
+...     if len(x) > 6: a.insert(0,x)
+...     print a
+... 
+['gato', 'ventana', 'defenestrado']
+['ventana', 'gato', 'ventana', 'defenestrado']
+['defenestrado', 'ventana', 'gato', 'ventana', 'defenestrado']
+
+
+25. ¿Qué hacen las siguientes sentencias?
+>>> r = range(5,10)
+>>> print r
+[5, 6, 7, 8, 9]
+>>> s = range(0, 10, 3)
+>>> print s
+[0, 3, 6, 9]
+>>> a = ['gato', 'ventana', 'defenestado']
+>>> for i in range(len(a)):
+...     print i, a[i]
+... 
+0 gato
+1 ventana
+2 defenestado
+
+26. ¿Qué hace el siguiente programa?
+	for i in range(0,5):
+		for j in range(0,3):
+			print i, j
+
+	Simplemente anida dos bucles en donde la 'i' pertenece al rango [0,4] y 'j' al rango [0,2].
+
+27. ¿Qué hace el siguiente programa?
+	for i in range(0,5):
+		for j in range(i,5):
+			print i, j
+
+	De la misma forma que en el caso anterior tenemos dos bucles anidados, pero en este caso si 'i' va a pertenecer al rango [0,4]; la variable 'j' va a tener un comportamiento distinto, ya que su rango va a depender de la iteración de 'i', de la forma que su rango va a ir decreciendo a medida que lo haga 'i', y va a ser de la forma [i,4]
+
+28. ¿Qué hace el siguiente programa?
+	for i in range(0,5):
+		for j in range(0,i):
+			print i, j
+
+	De la misma forma que en el caso anterior tenemos dos bucles anidados, igual que antes 'i' va a pertenecer al rango [0,4]mientras que la variable 'j' va a tener un comportamiento distinto, ya que su rango va a depender de la iteración de 'i', de tal forma que su rango va a ir incrementando (al contrario que antes) a medida que lo haga 'i', y va a ser de la forma [0,4]
+
+29. ¿Qué hace el siguiente programa?
+	
+	for i in range(0,4):
+		for j in range(0,4):
+			for k in range(0,2):
+				print i, j, k
+
+	En este caso tenemos tres bucles for anidados y los rangos a los que va a pertenecer cada variable son:
+		'i' pertenece a [0,3]
+		'j' pertenece a [0,3]
+		'k' pertenece a [0,1]
+
+
+30. ¿Qué hace el siguiente programa?
+	
+	for i in range(0,4):
+		for j in range(0,4):
+			for k in range(i,j):
+				print i, j, k
+
+	Este programa va a tener tres bucles for anidados en el que el rango de 'i' y de 'j' van a ser iguales, es decir [0, 3]. Y finalmente el rango de k va a depender de los valores de 'i' y 'j' en cada momento y siempre va a pertenecer al rango [0, 2] 
+
+
+
+31. ¿Qué hace el siguiente programa?
+	
+	for i in range(1,5):
+		for j in range(0,10,i):
+			print i, j
+
+	El primer bucle simplemente va a mover a la variable 'i' dentro de los valores [1,4], mientras que el segundo va a variar el valor de j de tal forma que va a coger los números del rango [0,9] pero los va a coger de 'i' en 'i' valores.
+
+
+32. ¿Qué hay mal en la siguiente función?
+
+	def es_perfecto(n):
+		for i in range(1,n):
+			sumatorio = 0
+			if n % i == 0:
+				sumatorio += i
+			return sumatorio == n
+
+	Lo que ocurre es que estamos inicializando en cada momento el valor de sumatorio dentro del bucle for, lo que debemos hacer es inicializar esta variable fuera del mismo. De esta forma obtenemos:
+
+
+	def es_perfecto(n):
+		sumatorio = 0
+		for i in range(1,n):
+			if n % i == 0:
+				sumatorio += i
+			return sumatorio == n
+
+33. ¿Qué hace el siguiente programa?
+
+	def tabla_perfectos(m):
+		for i in range(1, m+1):
+			if es_perfecto(i):
+				print i, ’es perfecto’
+
+	x = int( raw_input(’Introduzca un numero ’) )
+	tabla_perfectos(x)
+
+	Dado un número 'm' que le pasemos, si considera que es perfecto alguno de los valores que van del rango [0, m] nos lo va a mostrar en pantalla junto con un aviso diciéndonoslo, por el contrario, si el número no es perfecto simplemente no mostrará nada. 
