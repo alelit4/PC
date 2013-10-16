@@ -9,4 +9,7 @@ if a != 0:
   x = -b/a
   print 'Solucion: ', x
 if a == 0:
-  print 'La ecuación no tiene solución.'
+  if b == 0:
+  	print 'La ecuación tiene infinitas soluciones.'
+  else:
+  	print 'La ecuación no tiene solución.'
