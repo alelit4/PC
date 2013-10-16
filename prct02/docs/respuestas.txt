@@ -1,0 +1,7 @@
+rogramación Científica
+Alexandra Rivero García
+Respuestas Práctica 2
+
+Git Repository: https://github.com/alelit4/PC
+
+10. ¿Qué hace el siguiente programa? ¿Es correcto? ¿Qué está mal?
