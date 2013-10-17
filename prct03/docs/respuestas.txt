@@ -1,0 +1,38 @@
+
+13. Describa el contenido del fichero gravedad.py. ¿Cuántas partes se distinguen? ¿Qué clase de elementos aparecen en el mismo?
+  
+  Se pueden distinguir diversas partes en este fichero, primero encontramos un header en donde se nos muestran datos tanto del autor del fichero como una descripción detallada de cada una de las constantes y funciones que podemos encontrar en este, todo esto en forma de comentarios. En la descripción de las funciones podemos ver lo que calculan, las entradas y las salidas. Para finalizar esta zona acabamos con una descripción del historial que ha tenido el fichero. 
+  
+  Más adelante pasamos al código del módulo propiamente dicho. Se comienza con una zona en donde se declaran las llamadas a las funciones de los módulos externos que vamos a utilizar. 
+  
+  Después encontramos una zona en la que se declaran e inicializan las constantes que se van a utilizar dentro del módulo. A continuación vemos la zona de declaración de las funciones del módulo. 
+  
+  Para acabar, en el final del fichero podemos ver una zona en donde se inicializan otras constantes gracias a la asignación del resultado de dos llamadas con diferentes parámetros de una de las funciones del módulo. 
+  
+    
+14. ¿Qué es un módulo?
+
+  Un módulo es un fichero que posee un conjunto de funciones que se pueden reutilizar. Estos módulos pueden ser estándar(como math, random o sys) o pueden estar definidos por el usuario.
+  
+
+16. Describa el contenido del fichero main_gravedad.py. ¿Cuál es la principal diferencia con el fichero gravedad.py?
+
+  Este fichero es igual que gravedad.py y posee las mismas partes pero le añade al final una nueva zona, la zona de pruebas en donde hay un ejemplo de uso de una de las funciones del módulo y de una de las constantes de este, para luego mostrar estos contenido por pantalla. 
+  
+18. Describa la salida de la ejecución del fichero main_gravedad.py. ¿De qué clase de elementos se está verificando el correcto funcionamiento?
+
+  La salida de la ejecución de este fichero es la de las pruebas que tienen al finalizar el fichero, de lo que hablamos en el apartado anterior. Lo que hace es verificar el funcionamiento de la función velocidad_escape mediante el paso de una serie de parámetros y el de la constante ve_Tierra.
+  
+
+20. Describa el contenido del fichero uso_gravedad.py.¿Cuál es la principal diferencia con el fichero main_gravedad.py?
+
+  Este fichero empieza con una zona en donde importa del fichero gravedad.py la función velicidad_escape y la constante ve_Tierra; para utilizarlos más abajo y mostrar los resultados de estos por pantalla. 
+  
+
+23. Describa el contenido del fichero gravedad.pyc.
+
+  Para no tener que interpretar o analizar cada vez que se ejecuta uso_gravedad.py el módulo gravedad.py lo que se hace es que crea el fichero gravedad.pyc para ya tenerlo listo. El contenido de este no es visible para nosotros ya que simplemente guarda la traducción intermedia para no tener que revisar el módulo cada vez que ejecutemos uso_gravedad.py.
+  
+24. ¿En qué directorio está instalado el intérprete de Python?
+    /usr/bin/python
+    
