@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/python
 
 import sys
 import random
@@ -19,15 +19,29 @@ class bcolors:
 A = -100
 B = 100
 
+print bcolors.HEADER + "************************************************************"
+print "***    PRACTICA 03     -      PROGRAMACION CIENTIFICA   ****"
+print "************************************************************" + bcolors.ENDC
 
 
 if  len(sys.argv) == 2:
+    error = 0
     for i in range(0,int(sys.argv[1])):
         a = random.uniform(A, B)
         b = random.uniform(A, B)
-        print bcolors.HEADER + '--------- i = ', i+1, '---------'
-       
-        print  bcolors.OKBLUE + 'a = ', a
-        print bcolors.OKGREEN + 'b = ', b, bcolors.ENDC
+        if ((a * b)**3) != (a**3 * b**3):
+           error += 1
+           
+    print "************************************************************"
+    print "***   Se cumple ((a * b)**3) == (a **3 * b **3) ?       ****" 
+    print "************************************************************"
+    print "***          RESULTADOS DE LAS PRUEBAS                  **** "
+    print "************************************************************"
+    print "***" + bcolors.OKBLUE +"   Pruebas realizadas = ", sys.argv[1], bcolors.ENDC, "                       ****"
+    print "***" + bcolors.OKGREEN +"   Porcentaje de errores = ", error*100/float(sys.argv[1]), "%", bcolors.ENDC ,"                 ****"
+    print "************************************************************"
 else:
-    print bcolors.FAIL + "FAIL: No arguments. Try again!" + bcolors.ENDC
+    print bcolors.FAIL +  "************************************************************"
+    print "***      FAIL: No arguments. Try again!                 ****" 
+    print  "************************************************************" + bcolors.ENDC
+    
