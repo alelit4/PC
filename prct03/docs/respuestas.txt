@@ -1,8 +1,13 @@
+Programación Científica
+Alexandra Rivero García
+Respuestas Práctica 3
+
+Git Repository: https://github.com/alelit4/PC
 
 13. Describa el contenido del fichero gravedad.py. ¿Cuántas partes se distinguen? ¿Qué clase de elementos aparecen en el mismo?
   
   Se pueden distinguir diversas partes en este fichero, primero encontramos un header en donde se nos muestran datos tanto del autor del fichero como una descripción detallada de cada una de las constantes y funciones que podemos encontrar en este, todo esto en forma de comentarios. En la descripción de las funciones podemos ver lo que calculan, las entradas y las salidas. Para finalizar esta zona acabamos con una descripción del historial que ha tenido el fichero. 
-  
+
   Más adelante pasamos al código del módulo propiamente dicho. Se comienza con una zona en donde se declaran las llamadas a las funciones de los módulos externos que vamos a utilizar. 
   
   Después encontramos una zona en la que se declaran e inicializan las constantes que se van a utilizar dentro del módulo. A continuación vemos la zona de declaración de las funciones del módulo. 
@@ -34,5 +39,6 @@
   Para no tener que interpretar o analizar cada vez que se ejecuta uso_gravedad.py el módulo gravedad.py lo que se hace es que crea el fichero gravedad.pyc para ya tenerlo listo. El contenido de este no es visible para nosotros ya que simplemente guarda la traducción intermedia para no tener que revisar el módulo cada vez que ejecutemos uso_gravedad.py.
   
 24. ¿En qué directorio está instalado el intérprete de Python?
-    /usr/bin/python
     
+    /usr/bin/python
+
