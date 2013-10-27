@@ -1,0 +1,1 @@
+{"ts":1382031141098,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"#! /usr/bin/python\n\nfrom gravedad import velocidad_escape, ve_Tierra \n\nprint 'La velocidad de escape de Pluton es ', velocidad_escape(1.29e22, 1.6e6), ' m/s.'\nprint 'La de la Tierra es ', ve_Tierra , ' m/s.' \n"]],"start1":0,"start2":0,"length1":0,"length2":209}]],"length":209}

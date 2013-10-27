@@ -1,0 +1,5 @@
+Alexandra Rivero
+
+14. Repita los ejercicios 12 y 13 con el resto de los ejemplos. Describa el contenido de los ﬁcheros ej?.py. ¿Qué hace la función plot?
+
+	En todos los ficheros tenemos primero una definición de los valores de las variables 'x' e 'y', luego la definición de la función a representar para poder después realizar la llamada a la función plot y finalmente imprimir el resultado de la gráfica en un fichero de imagen.
